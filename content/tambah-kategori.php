@@ -13,14 +13,16 @@ if (isset($_POST['simpan'])) {
 
     if (!$id) {
         $insert = mysqli_query($koneksi, "INSERT INTO kategori (nama_kategori,keterangan) VALUES ('$nama_kategori','$keterangan')");
+        header("location:?pg=kategori&tambah=berhasil");
     } else {
         $update = mysqli_query($koneksi, "UPDATE kategori SET
         nama_kategori='$nama_kategori',
         keterangan = '$keterangan'
         WHERE id = '$id'
         ");
+        header("location:?pg=kategori&edit=berhasil");
     }
-    header("location:?pg=kategori&tambah=berhasil");
+    
 }
 
 if (isset($_GET['delete'])) {

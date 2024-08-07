@@ -17,8 +17,7 @@ if (isset($_POST['login'])) {
             $_SESSION['ID_USER']      = $dataUser['id_user'];
             header("location: index.php");
         } else {
-            header("location:  
-             login.php?error=login");
+            header("location:login.php?error=login");
         }
     }
 }

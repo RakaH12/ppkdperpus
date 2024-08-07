@@ -14,14 +14,16 @@ if (isset($_POST['simpan'])) {
 
     if (!$id) {
         $insert = mysqli_query($koneksi, "INSERT INTO level (nama_level, keterangan) VALUES ('$nama_level','$keterangan')");
+        header("location:?pg=level&tambah=berhasil");
     } else {
         $update = mysqli_query($koneksi, "UPDATE level SET
         nama_level='$nama_level',
       keterangan = '$keterangan'
         WHERE id = '$id'
         ");
+        header("location:?pg=level&edit=berhasil");
     }
-    header("location:?pg=level&tambah=berhasil");
+    
 }
 
 if (isset($_GET['delete'])) {

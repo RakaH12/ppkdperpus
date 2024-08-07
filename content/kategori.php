@@ -3,7 +3,7 @@ $queryUser = mysqli_query($koneksi, "SELECT * FROM kategori ORDER BY id DESC");
 //$rowUser = mysqli_fetch_assoc($queryUser);
 // die;
 ?>
-<div class="container">
+<div class="container mt-5">
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
